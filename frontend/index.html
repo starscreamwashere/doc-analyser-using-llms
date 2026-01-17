@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livlong AI | Medical Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Livlong 365 Document Analyzer</h1>
+        <p class="subtitle">Upload medical reports for instant AI-powered insights.</p>
+        
+        <div class="upload-section" onclick="document.getElementById('fileInput').click()">
+            <p>Click to select or drag & drop a PDF medical report</p>
+            <input type="file" id="fileInput" accept=".pdf" style="display:none">
+            <small id="fileNameDisplay"></small>
+        </div>
+
+        <button id="analyzeBtn" class="btn">Analyze Report</button>
+        
+        <div id="loader" class="loader"></div>
+        
+        <div id="result">
+            <strong>Analysis Result:</strong>
+            <div id="analysisContent"></div>
+        </div>
+    </div>
+
+    <script src="src/api.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>

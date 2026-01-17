@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #00a6ff;
+    --secondary-color: #003366;
+    --bg-color: #f4f7f9;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.upload-section {
+    border: 2px dashed #cbd5e0;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.upload-section:hover {
+    border-color: var(--primary-color);
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: opacity 0.2s;
+}
+
+.btn:disabled {
+    background: #ccc;
+}
+
+#result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fafafa;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    display: none;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.loader {
+    display: none;
+    margin: 1rem auto;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

@@ -1,0 +1,26 @@
+
+services:
+  # Backend FastAPI Service
+  backend:
+    build: ./backend
+    container_name: livlong_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    # The volumes allow for 'hot-reloading' during development
+
+  # Frontend Nginx Service
+  frontend:
+    build: ./frontend
+    container_name: livlong_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+networks:
+  default:
+    name: livlong_network

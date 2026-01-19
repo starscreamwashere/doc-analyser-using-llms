@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8000/api/v1/medical";
+const API_BASE_URL = "http://13.61.27.143:8000/api/v1/medical";
 
 const MedicalAPI = {
     async analyze(file) {
